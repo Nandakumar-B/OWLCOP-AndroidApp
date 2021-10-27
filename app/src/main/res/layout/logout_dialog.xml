@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	style="@style/smallCard">
+
+	<ImageView
+		android:id="@+id/logout_icon"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:src="@drawable/ic_logout"/>
+
+	<TextView
+		android:layout_toRightOf="@+id/logout_icon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="LOGOUT"
+		android:id="@+id/log_head"
+		style="@style/headText"
+		android:textStyle="bold"/>
+
+	<TextView
+		android:id="@+id/log_txt"
+		android:layout_below="@+id/log_head"
+		android:layout_toRightOf="@+id/logout_icon"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Are you sure to logout ?"
+		android:layout_margin="10dp"
+		android:padding="10dp"
+		android:letterSpacing="0.1"
+		android:textColor="#0A67E5"
+		android:textSize="15sp"/>
+
+	<LinearLayout
+		android:layout_below="@+id/log_txt"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="right|center">
+
+		<Button
+			android:id="@+id/logout_no"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="NO"
+			android:background="@drawable/button_background"
+			android:padding="10dp"
+			android:layout_margin="10dp"
+			android:textColor="#FFFFFF"/>
+
+		<Button
+			android:id="@+id/logout_yes"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="YES"
+			android:background="@drawable/button_background"
+			android:padding="10dp"
+			android:layout_margin="10dp"
+			android:textColor="#FFFFFF"/>
+
+	</LinearLayout>
+
+</RelativeLayout>
+

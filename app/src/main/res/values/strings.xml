@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">OWLCOP</string>
+    <string name="txt_limit">TOTAL\n INSIDE</string>
+    <string name="txt_vacant">VACANT\n FOR</string>
+    <string name="icon">icon</string>
+    <string name="owl_cop">OWL-COP</string>
+    <string name="persons">persons</string>
+    <string name="_0">0</string>
+    <string name="change_limit">CHANGE LIMIT</string>
+    <string name="dash">-</string>
+    <string name="plus">+</string>
+    <string name="no_internet_connection">No internet connection!</string>
+</resources>

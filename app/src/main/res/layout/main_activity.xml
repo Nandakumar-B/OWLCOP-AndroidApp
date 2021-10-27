@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#DEDEDE"
+	android:fillViewport="true">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#DEDEDE">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="180dp"
+			android:id="@+id/topLayout"
+			android:background="@drawable/topcard_background">
+
+			<ImageView
+				android:id="@+id/icon"
+				android:layout_width="70dp"
+				android:layout_height="70dp"
+				android:src="@drawable/owl"
+				android:layout_marginStart="10dp"
+				android:contentDescription="@string/icon" />
+
+			<TextView
+				android:id="@+id/tv_appname"
+				android:textColor="#ffffff"
+				android:textStyle="bold"
+				android:padding="5dp"
+				android:layout_below="@+id/icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/owl_cop"
+				android:layout_marginStart="10dp"
+				android:textSize="25sp"/>
+
+			<ImageButton
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_alignParentEnd="true"
+				android:layout_margin="10dp"
+				android:background="@drawable/logout_selector"
+				android:id="@+id/btn_logout"
+				android:contentDescription="@string/icon" />
+
+			<ToggleButton
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:layout_alignParentEnd="true"
+				android:layout_marginTop="10dp"
+				android:layout_marginEnd="50dp"
+				android:id="@+id/btn_alarm"
+				android:textOff=""
+				android:textOn=""/>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:id="@+id/card_content"
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_below="@+id/topLayout"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:weightSum="2"
+			android:gravity="center_horizontal"
+			android:baselineAligned="false">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				style="@style/smallCard">
+
+				<TextView
+					android:id="@+id/tv_limit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/txt_limit"
+					style="@style/headText"/>
+
+				<TextView
+					android:id="@+id/tv_lim_value"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/_0"
+					style="@style/valueText"
+					android:scaleY="1.5"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/persons"
+					style="@style/headText"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				style="@style/smallCard"
+				android:id="@+id/vacant_card">
+
+				<TextView
+					android:id="@+id/tv_vacant"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/txt_vacant"
+					style="@style/headText"/>
+
+				<TextView
+					android:id="@+id/tv_vacant_value"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/_0"
+					style="@style/valueText"
+					android:scaleY="1.5"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/persons"
+					style="@style/headText"
+					android:id="@+id/tv_vacant1"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<RelativeLayout
+			android:id="@+id/set_content"
+			android:layout_below="@+id/card_content"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			style="@style/smallCard">
+
+			<TextView
+				android:id="@+id/tv_set"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/change_limit"
+				android:layout_alignParentTop="true"
+				style="@style/headText"/>
+
+			<Button
+				android:layout_below="@+id/tv_set"
+				android:id="@+id/btn_decrement"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/dash"
+				android:background="@drawable/button_background"
+				android:layout_margin="10dp"
+				android:textColor="#FFFFFF"
+				android:textSize="25sp"
+				android:textStyle="bold"/>
+
+			<EditText
+				android:layout_below="@+id/tv_set"
+				android:layout_toEndOf="@+id/btn_decrement"
+				android:id="@+id/et_set"
+				android:layout_width="60dp"
+				android:inputType="number"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:cursorVisible="false"
+				style="@style/EditTheme"
+				android:gravity="center"
+				android:autofillHints="number" />
+
+			<Button
+				android:layout_below="@+id/tv_set"
+				android:layout_toEndOf="@+id/et_set"
+				android:id="@+id/btn_increment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/plus"
+				android:background="@drawable/button_background"
+				android:layout_margin="10dp"
+				android:textColor="#FFFFFF"
+				android:textSize="25sp"
+				android:textStyle="bold"/>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@+id/set_content"
+			android:gravity="center"
+			android:layout_marginTop="30dp"
+			android:id="@+id/bottom_alert"
+			android:visibility="gone">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/no_internet_connection"
+				style="@style/headText"
+				android:textColor="#EEEEEE"
+				android:id="@+id/txt_status"/>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+</ScrollView>
+
